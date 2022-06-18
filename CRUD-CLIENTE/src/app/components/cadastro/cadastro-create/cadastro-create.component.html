@@ -1,0 +1,40 @@
+<mat-card>
+    <mat-card-title>Novo Cliente</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="cadastro.nome" name="nome">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="CPF" [(ngModel)]="cadastro.cpf" name="cpf">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="E-mail" [(ngModel)]="cadastro.email" name="email">
+        </mat-form-field>
+        
+        <mat-form-field>
+            <input matInput placeholder="Endereço" [(ngModel)]="cadastro.endereco" name="endereço">
+        </mat-form-field>
+        
+        <mat-form-field>
+            <input matInput placeholder="Telefone" [(ngModel)]="cadastro.telefone" name="telefone">
+        </mat-form-field>
+        
+        
+        <mat-radio-group placeholder="Telefone" [(ngModel)]="cadastro.status" name="status" aria-label="Status">
+            <mat-radio-button [value]="true">Ativo</mat-radio-button>
+            <mat-radio-button [value]="false">Inativo</mat-radio-button>
+        </mat-radio-group>              
+     
+    </form>
+
+    <button mat-raised-button (click)="createCadastro()" color="primary">
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+
+
+</mat-card>

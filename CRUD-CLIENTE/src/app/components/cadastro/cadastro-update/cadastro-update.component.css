@@ -1,0 +1,11 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-radio-button{
+    margin-right: 15px;
+}
+button{
+    margin: 10px;
+}
